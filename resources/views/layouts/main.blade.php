@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}" >
 
-    <title>DShape - Avaliações de cria</title>
+    <title>DShape - Site para avaliação fisica</title>
   </head>
   <body>
-      
+
     @yield('container')
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
-
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
 
   </body>
 </html>
