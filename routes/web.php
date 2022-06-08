@@ -18,12 +18,11 @@ Route::get('/', function () {
     return view('measurements/home');
 });
 
-Route::get('/measurements', function () {
-    return view('measurements/list');
-});
+Route::get('/measurements', [MeasurementsController::class, 'index']);
 
 Route::get('/measurements/new', function () {
     return view('measurements/form');
 });
 
 Route::post('/measurements/new', [MeasurementsController::class,'store']);
+

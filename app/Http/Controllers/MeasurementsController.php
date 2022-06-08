@@ -7,6 +7,11 @@ use App\Models\Measurements;
 
 class MeasurementsController extends Controller
 {
+    public function index(){
+        $measurements = Measurements::all();
+        return view('/measurements/list',['measurements' => $measurements]);
+    }
+
     //
     public function store(Request $request){
         //criando o objeto Medidas
@@ -29,5 +34,8 @@ class MeasurementsController extends Controller
 
         //encaminhando para salvar no banco de dados
         $measurements->save();
+
+        return redirect('/measurements');
     }
 }
+

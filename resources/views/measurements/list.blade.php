@@ -27,22 +27,16 @@
                               </tr>
                             </thead>
                             <tbody>
+                              @foreach ($measurements as $measurement)
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Data</td>
+                                <th scope="row">{{$measurement->id}}</th>
+                                <td>{{$measurement->date}}</td>
                                 <td>
                                     <button class="btn btn-secondary">Editar</button>
                                     <button class="btn btn-danger">Excluir</button>
                                 </td>
                               </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Data2</td>
-                                <td>
-                                    <button class="btn btn-secondary">Editar</button>
-                                    <button class="btn btn-danger">Excluir</button>
-                                </td>
-                              </tr>
+                              @endforeach
                             </tbody>
                           </table>
                     </div>
